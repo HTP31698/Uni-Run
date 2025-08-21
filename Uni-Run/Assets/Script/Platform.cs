@@ -14,6 +14,14 @@ public class Platform : MonoBehaviour
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
     }
 
+    private void Update()
+    {
+        if(transform.position.x < -20.48)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     private void OnEnable()
     {
         stepped = false;

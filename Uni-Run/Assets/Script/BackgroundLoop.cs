@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BackgroundLoop : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 8f;
 
     private float width;
     void Start()
