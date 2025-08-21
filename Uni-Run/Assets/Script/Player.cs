@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
         GameObject findgo = GameObject.FindGameObjectWithTag("GameController");
@@ -69,8 +70,8 @@ public class Player : MonoBehaviour
         GameObject findgo = GameObject.FindGameObjectWithTag("GameController");
         GameManager gm = findgo.GetComponent<GameManager>();
         animator.SetTrigger("Die");
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic; //¹°¸® ½Ã¹Ä X
+        rb.linearVelocity = Vector2.zero; // Á×ÀºÀÚ¸®¿¡¼­ ¸ØÃß°Ô ÇÏ±â
         isDead = true;
 
         gm.OnPlayerDead();
